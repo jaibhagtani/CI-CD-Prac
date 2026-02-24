@@ -92,7 +92,7 @@ export default function Home() {
             ))}
           </div>
         </section>
-
+{/* 
         <aside className="rounded-lg border p-4 bg-white shadow-sm dark:bg-slate-800 dark:border-slate-700">
           <h2 className="font-semibold">Your Cart</h2>
           <div className="mt-4">
@@ -120,7 +120,7 @@ export default function Home() {
           </div>
 
           <button onClick={checkout} className="mt-4 w-full rounded-full bg-amber-600 px-4 py-2 text-white font-semibold">Checkout</button>
-        </aside>
+        </aside> */}
       </main>
     </div>
   );
