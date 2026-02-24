@@ -1,0 +1,23 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+# https://github.com/appleboy/ssh-action used to ssh into ec2.
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Repo
+        uses: actions/checkout@v4
+
+      - name: Execute remote SSH commands using password
+        uses: appleboy/ssh-action@v1
+        with:
+          host: 13.220.115.59
+          username: ubuntu
+          password: ${{ secrets.PRIVATE_SSH_KEY }}
+          port: 22
+          script: whoami
